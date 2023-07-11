@@ -24,6 +24,7 @@ permut_importance_vap.py: Routine to determine best descriptors using permuataio
 
 model_holdout_tests.py: Routine to perform chemical familiy holdout tests using best descriptors
 
+append_NIST.py: Script to extract enthalpy values from NIST (Forked from vmurc - victormurcia @https://github.com/victormurcia/nist_webscraper)
 
 
 Results/
