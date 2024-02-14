@@ -128,18 +128,43 @@ with open(output_fn, 'w', newline='') as fout:
 # Calcualte best hyperparameters
 #Example for Random Forest
 
-steps = [('scaler', StandardScaler()), ('Forest', RandomForestRegressor())]
-pipeline = Pipeline(steps)
+# Load VOC data
+voc_data = pd.read_csv('VOC-Database.csv')
 
-parameters = {'Forest__n_estimators': [100, 150, 200, 250],
-              'Forest__max_features': ['sqrt','log2'],
-              'Forest__min_samples_split': [2, 5, 10],
-              'Forest__min_samples_leaf': [1, 2, 5, 10],
-              'Forest__max_depth': [10, 15, 20, 25, 30, 35, 40, 45, 50],
-              'Forest__bootstrap': [True, False],
-              'Forest__warm_start': [True, False]}
+# Define a descriptor set (example: using VSA descriptors)
+exclude_cols = ['CAS', 'VOC', 'dvap', 'num', 'External', 'SMILES', 'Key', 'Family']
+complete = [col for col in voc_data.columns if col not in exclude_cols]
+X = voc_data[complete]
+y = voc_data['dvap']
 
-model = RandomizedSearchCV(pipeline, parameters, n_iter=10, scoring='neg_mean_absolute_error', cv=10)
+# Fill missing values
+X = X.fillna(X.mean())
 
-model.fit(X_train, y_train)
-Best_Parameters = model.best_params_
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.6, random_state=47)
+
+# Define a pipeline
+pipeline = Pipeline([('rf', RandomForestRegressor(random_state=47))])
+
+# Define a parameter grid to search
+param_grid = {
+    'rf__n_estimators': [100, 150, 200, 300],
+    'rf__max_depth': [10, 20, 30, None],
+    'rf__min_samples_split': [2, 5, 10],
+    'rf__min_samples_leaf': [1, 2, 4]
+}
+
+# Create a GridSearchCV object
+grid_search = GridSearchCV(pipeline, param_grid, cv=5, n_jobs=-1, verbose=2, scoring='neg_mean_absolute_error')
+
+# Fit the model
+grid_search.fit(X_train, y_train)
+
+# Get the best model
+best_model = grid_search.best_estimator_
+
+# Make predictions and evaluate
+y_pred = best_model.predict(X_test)
+print("Best Model Parameters:", grid_search.best_params_)
+print("R^2 Score:", r2_score(y_test, y_pred))
+print("MAE:", mean_absolute_error(y_test, y_pred))
