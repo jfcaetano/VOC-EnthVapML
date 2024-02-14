@@ -8,26 +8,25 @@ This is the repository of the paper "Data-Driven, Explainable Machine Learning M
 
 Database/
 
-Mode_Database.csv: Complete dataset with descriptor calculations
+VOC-Database.csv: Complete dataset with descriptor calculations to run the model
 
-ML_Vap_Full_Database_v1.xlsx: Raw complete dataset with internal and exteranal sources
+VOC-Database-Global.xlsx: Raw complete dataset with internal and external sources
+
+desc_VOC-RF.csv: Descriptor group categorisation
 
 
 Scripts/
 
 rdkit_conversion_vap.py: Calculation of desired RdKit descriptors using the raw database
 
-model_vap_calculations.py: Model calculations using desired algorithms with all calculated descriptors
+dVap-Model-Testing.py: Model calculations using desired algorithms with all calculated descriptors
 
-model_desc_groups.py: Model performance using only best descriptors for model optimization
+VOC-Model-Testing.py: Model calculations for VOC with all calculated descriptors and hyperparameter optimization
 
-permut_importance_vap.py: Routine to determine best descriptors using permuataion importance
+dVap-Family-Group-Testing.py: Model calculations for VOC descriptor groups and chemical family testing
 
-model_holdout_tests.py: Routine to perform chemical familiy holdout tests using best descriptors
-
-append_NIST.py: Script to extract enthalpy values from NIST (Forked from vmurc - victormurcia @https://github.com/victormurcia/nist_webscraper)
 
 
 Results/
 
-ML_Vap_Full_Results_SI.xlsx: File including all model results presented in the paper (including permuation importance, model statistical performance, solvent holdout tests and descriptors group performance determinations
+VOC-ML-Full-Results.xlsx: File including all model results presented in the paper (including permutation importance, model statistical performance and descriptors group performance determinations)
