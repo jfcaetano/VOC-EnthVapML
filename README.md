@@ -1,7 +1,7 @@
 # VOC-EnthVapML
-This is the repository of the paper "Data Science Meets Environmental Chemistry: An Explainable Machine Learning Model for Predicting Volatile Organic Compounds’ Standard Vaporization Enthalpy"
+This is the repository of the paper "Data-Driven, Explainable Machine Learning Model for Predicting Volatile Organic Compounds’ Standard Vaporization Enthalpy"
 
-The full web-scrapped NIST database is available at Zenodo (https://doi.org/10.5281/zenodo.8132046)
+
 
 
 # File Overview
