@@ -6,7 +6,7 @@ This is the repository of the paper "Data-Driven, Explainable Machine Learning M
 
 # File Overview
 
-Database/
+Database
 
 VOC-Database.csv: Complete dataset with descriptor calculations to run the model
 
@@ -15,7 +15,7 @@ VOC-Database-Global.xlsx: Raw complete dataset with internal and external source
 desc_VOC-RF.csv: Descriptor group categorisation
 
 
-Scripts/
+Scripts
 
 rdkit_conversion_vap.py: Calculation of desired RdKit descriptors using the raw database
 
