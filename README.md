@@ -30,3 +30,5 @@ dVap-Family-Group-Testing.py: Model calculations for VOC descriptor groups and c
 Results/
 
 VOC-ML-Full-Results.xlsx: File including all model results presented in the paper (including permutation importance, model statistical performance and descriptors group performance determinations)
+
+dVap-ML-Dev-Results.xlsx: File including model results for preiction optimization of the standard enthalpy of vaporization (including permutation importance, model statistical performance and descriptors group performance determinations).
