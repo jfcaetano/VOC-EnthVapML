@@ -15,7 +15,7 @@ desc_VOC-RF.csv: Descriptor group categorisation
 
 Scripts
 
-rdkit_conversion_vap.py: Calculation of desired RdKit descriptors using the raw database
+rdkit_conversion_vap.py: Calculation of desired RDKit descriptors using the raw database
 
 dVap-Model-Testing.py: Model calculations using desired algorithms with all calculated descriptors
 
