@@ -8,7 +8,7 @@ Database
 
 VOC-Database.csv: Complete dataset with descriptor calculations to run the model
 
-VOC-Database-Global.xlsx: Raw complete dataset with internal and external sources
+Database-Global.xlsx: Raw complete dataset with internal and external sources
 
 desc_VOC-RF.csv: Descriptor group categorisation
 
