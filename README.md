@@ -1,5 +1,5 @@
 # VOC-EnthVapML
-This is the repository for the research projects "Data-Driven, Explainable Machine Learning Model for Predicting Volatile Organic Compounds’ Standard Vaporization Enthalpy" and "Enhancing Predictive Chemistry: A Machine Learning Suite for Advanced Chemical Property Prediction"
+This is the repository for the research project: "Enhancing Predictive Chemistry: A Machine Learning Suite for Advanced Chemical Property Prediction"
 
 
 # File Overview
