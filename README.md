@@ -1,4 +1,7 @@
 # VOC-EnthVapML
+
+<img width="759" alt="Screenshot 2025-04-11 at 14 37 23" src="https://github.com/user-attachments/assets/f16d78a5-f224-4741-b102-5047d595d239" />
+
 This is the repository for the research project: "Data-Driven, Explainable Machine Learning Model for Predicting Volatile Organic Compounds’ Standard Vaporization Enthalpy" DOI: https://doi.org/10.1016/j.chemosphere.2024.142257
 
 The complete dataset is doposited in Zenodo: https://zenodo.org/doi/10.5281/zenodo.11127879
