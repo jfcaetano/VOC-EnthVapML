@@ -45,3 +45,15 @@ python3 -m venv venv
 source ./venv/bin/activate
 pip install -U -r requirements.txt
 ```
+
+To validate that your environment reliably reproduces the results of the authors, execute the test script:
+
+```
+python ./Scripts/VOC-Model-Testing.py
+```
+
+this will generate a `Results/VOC-results.csv` with should match (with a certain TBD floating point tolerance) the file `Results/VOC-results.csv` in the repo; verify the differences with:
+
+```
+git diff Results/VOC-results.csv
+```
