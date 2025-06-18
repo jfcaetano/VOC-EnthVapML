@@ -23,7 +23,7 @@ models = [
 
 
 # Load data
-data = pd.read_csv('VOC-Database.csv')
+data = pd.read_csv('Database/VOC-Database.csv')
 
 # Exclude columns
 exclude_cols = ['CAS', 'dvap', 'num', 'External', 'SMILES', 'Key', 'Family', 'VOC']
@@ -125,7 +125,7 @@ for model in models:
         results.append(result)
 
 # Output file
-output_fn = 'VOC-results.csv'
+output_fn = 'Results/VOC-results.csv'
 with open(output_fn, 'w', newline='') as fout:
     writer = csv.DictWriter(fout, fieldnames=results[0].keys())
     writer.writeheader()

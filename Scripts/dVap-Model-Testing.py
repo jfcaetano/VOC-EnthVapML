@@ -22,7 +22,7 @@ models = [
     neural_network.MLPRegressor(random_state=47)]
 
 # Load data
-data = pd.read_csv('VOC-Database.csv')
+data = pd.read_csv('Database/VOC-Database.csv')
 
 # Exclude columns
 exclude_cols = ['CAS', 'VOC', 'dvap', 'num', 'External', 'SMILES', 'Key', 'Family']
@@ -116,7 +116,7 @@ for model in models:
         results.append(result)
 
 # Output file
-output_fn = 'dVAP-Results.csv'
+output_fn = 'Database/dVAP-Results.csv'
 with open(output_fn, 'w', newline='') as fout:
     writer = csv.DictWriter(fout, fieldnames=results[0].keys())
     writer.writeheader()
@@ -129,7 +129,7 @@ with open(output_fn, 'w', newline='') as fout:
 #Example for Random Forest
 
 # Load VOC data
-voc_data = pd.read_csv('VOC-Database.csv')
+voc_data = pd.read_csv('Database/VOC-Database.csv')
 
 # Define a descriptor set (example: using VSA descriptors)
 exclude_cols = ['CAS', 'VOC', 'dvap', 'num', 'External', 'SMILES', 'Key', 'Family']
