@@ -14,10 +14,10 @@ from sklearn.model_selection import RandomizedSearchCV
 
 
 # Load descriptor data
-desc_data = pd.read_csv('desc_VOC-RF.csv')
+desc_data = pd.read_csv('Database/desc_VOC-RF.csv')
 
 # Load VOC data
-voc_data = pd.read_csv('VOC-Database.csv')
+voc_data = pd.read_csv('Database/VOC-Database.csv')
 
 # Extract lists for each descriptor type
 vsa = desc_data['VSA'].dropna().tolist()
